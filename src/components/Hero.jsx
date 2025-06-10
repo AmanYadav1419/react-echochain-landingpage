@@ -1,8 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/moving-border";
-// import { Link } from "react-router";
-// import Button from "./Button";
+
 
 const Hero = () => {
   return (

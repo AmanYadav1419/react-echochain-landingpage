@@ -26,6 +26,7 @@ const team = [
         socials: {
             github: "https://github.com/Shejalthalkar",
             linkedin: "https://linkedin.com/in/shejal-thalkar-157743258",
+            twitter:"https://x.com/ThalkarShejal",
         },
     },
     {
@@ -36,6 +37,7 @@ const team = [
         socials: {
             github: "https://github.com/Unnati052003",
             linkedin: "https://linkedin.com/in/unnati-warule-31b37924b",
+            twitter:"https://x.com/UnnatiWarule",
         },
     },
     {
