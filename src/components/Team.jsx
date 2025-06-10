@@ -1,7 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-// import { FaGithub, FaLinkedin } from "react-icons/fa";
-// import { SiGithub, SiLinkedin } from "react-icons/si";
 
 const team = [
     {
@@ -10,8 +8,10 @@ const team = [
         img: "https://randomuser.me/api/portraits/men/32.jpg",
         desc: "Passionate about decentralized tech and building scalable apps.",
         socials: {
-            github: "https://github.com/amanyadavdev",
-            linkedin: "https://linkedin.com/in/amanyadavdev",
+            github: "https://github.com/AmanYadav1419",
+            linkedin: "https://linkedin.com/in/aman-yadav2003",
+            twitter: "https://x.com/Aman_Yadav1419",
+            portfolio: "https://aman-yadav1419-portfolio.vercel.app/",
         },
     },
     {
@@ -20,8 +20,8 @@ const team = [
         img: "https://randomuser.me/api/portraits/women/44.jpg",
         desc: "Designs intuitive and beautiful user experiences.",
         socials: {
-            github: "https://github.com/shejal",
-            linkedin: "https://linkedin.com/in/shejal",
+            github: "https://github.com/Shejalthalkar",
+            linkedin: "https://linkedin.com/in/shejal-thalkar-157743258",
         },
     },
     {
@@ -30,8 +30,8 @@ const team = [
         img: "https://randomuser.me/api/portraits/women/68.jpg",
         desc: "Loves crafting interactive and responsive interfaces.",
         socials: {
-            github: "https://github.com/unnati",
-            linkedin: "https://linkedin.com/in/unnati",
+            github: "https://github.com/Unnati052003",
+            linkedin: "https://linkedin.com/in/unnati-warule-31b37924b",
         },
     },
     {
@@ -40,8 +40,9 @@ const team = [
         img: "https://randomuser.me/api/portraits/women/65.jpg",
         desc: "Frontend enthusiast with a knack for clean code.",
         socials: {
-            github: "https://github.com/sanuli",
-            linkedin: "https://linkedin.com/in/sanuli",
+            github: "https://github.com/sanuli2003",
+            linkedin: "https://linkedin.com/in/sanuli-v-a29a81249",
+            twitter: "https://x.com/SanuliVanjari",
         },
     },
 ];
@@ -55,6 +56,9 @@ const cardVariants = {
         transition: { type: "spring", bounce: 0.3, duration: 0.7 },
     },
 };
+
+// Helper to get initials for social names
+const getInitial = (name) => name.charAt(0).toUpperCase();
 
 const Team = () => {
     return (
@@ -80,23 +84,23 @@ const Team = () => {
                         <h4 className="text-lg font-semibold text-white">{member.name}</h4>
                         <p className="text-blue-400 mb-2">{member.role}</p>
                         <p className="text-gray-300 text-sm mb-4">{member.desc}</p>
-                        <div className="flex flex-col gap-2 items-center">
-                            <a
-                                href={member.socials.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white text-sm underline transition-colors"
-                            >
-                                GitHub: {member.socials.github}
-                            </a>
-                            <a
-                                href={member.socials.linkedin}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-blue-400 text-sm underline transition-colors"
-                            >
-                                LinkedIn: {member.socials.linkedin}
-                            </a>
+                        <div className="flex flex-wrap gap-2 justify-center">
+                            {Object.entries(member.socials).map(([key, value]) =>
+                                value ? (
+                                    <a
+                                        key={key}
+                                        href={value}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center gap-1 bg-gray-700 hover:bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-semibold transition-colors"
+                                    >
+                                        <span className="bg-blue-400 text-black rounded-full w-6 h-6 flex items-center justify-center font-bold mr-1">
+                                            {getInitial(key)}
+                                        </span>
+                                        {key.charAt(0).toUpperCase() + key.slice(1)}
+                                    </a>
+                                ) : null
+                            )}
                         </div>
                     </motion.div>
                 ))}
