@@ -1,11 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Sanuli from "../assets/sanuli.jpg"; 
+import Aman from "../assets/aman.jpg";
+import Shejal from "../assets/shejal.jpg";
+import Unnati from "../assets/unnati.jpg";
 
 const team = [
     {
         name: "Aman Yadav",
         role: "Blockchain + Full Stack Developer",
-        img: "https://randomuser.me/api/portraits/men/32.jpg",
+        img: Aman,
         desc: "Passionate about decentralized tech and building scalable apps.",
         socials: {
             github: "https://github.com/AmanYadav1419",
@@ -15,9 +19,9 @@ const team = [
         },
     },
     {
-        name: "Shejal",
+        name: "Shejal Thalkar",
         role: "Frontend Developer",
-        img: "https://randomuser.me/api/portraits/women/44.jpg",
+        img: Shejal,
         desc: "Designs intuitive and beautiful user experiences.",
         socials: {
             github: "https://github.com/Shejalthalkar",
@@ -25,9 +29,9 @@ const team = [
         },
     },
     {
-        name: "Unnati",
+        name: "Unnati Warule",
         role: "Frontend Developer",
-        img: "https://randomuser.me/api/portraits/women/68.jpg",
+        img: Unnati,
         desc: "Loves crafting interactive and responsive interfaces.",
         socials: {
             github: "https://github.com/Unnati052003",
@@ -35,9 +39,9 @@ const team = [
         },
     },
     {
-        name: "Sanuli",
+        name: "Sanuli Vanjari",
         role: "Frontend Developer",
-        img: "https://randomuser.me/api/portraits/women/65.jpg",
+        img: Sanuli,
         desc: "Frontend enthusiast with a knack for clean code.",
         socials: {
             github: "https://github.com/sanuli2003",

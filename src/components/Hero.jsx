@@ -10,6 +10,7 @@ const Hero = () => {
     id="hero"
     className="min-h-screen flex flex-col justify-center items-center text-center bg-gradient-to-br from-black via-blue-900 to-black px-4 pt-36">
       <motion.h1
+      // text-[#C050D6]
         className="text-4xl md:text-6xl font-bold mb-4"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
